@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- 아이콘-->
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <title>회원 목록</title>
+
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/chat.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- 왼쪽 네비게이션 시작-->
+      <!-- 클래스에 active시 클릭 효과 -->
+      <nav id="sidebar" class="sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="index.html">
+            <span class="align-middle">DAGYM</span>
+          </a>
+
+          <ul class="sidebar-nav">
+            <li class="sidebar-header">PT 회원</li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="userList.html">
+                <i class="align-middle" data-feather="list"></i>
+                <span class="align-middle">회원 목록</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="userMangement.html">
+                <i class="align-middle" data-feather="check-square"></i>
+                <span class="align-middle">회원 관리</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a
+                data-target="#ui"
+                data-toggle="collapse"
+                class="sidebar-link collapsed"
+              >
+                <i class="align-middle" data-feather="users"></i>
+                <span class="align-middle">회원</span>
+              </a>
+              <ul
+                id="ui"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="userInfo.html">김수현</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="userInfo.html">전지현</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="calendar.html">
+                <i class="align-middle" data-feather="calendar"></i>
+                <span class="align-middle">일정</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="chat.html">
+                <i class="align-middle" data-feather="message-square"></i>
+                <span class="align-middle">채팅</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="trainerBoard.html">
+                <i class="align-middle" data-feather="box"></i>
+                <span class="align-middle">트레이너 게시판</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- 왼쪽 네비게이션 끝-->
+
+    
+    <!-- 메인 시작-->
+    <div class="main">
+      <!-- 상단 nav 시작 -->
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <!-- 상단 왼쪽 활성화하고 숨길수 있는 거-->
+        <a class="sidebar-toggle d-flex">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+        <div class="navbar-collapse collapse">
+          <ul class="navbar-nav navbar-align">
+            <!-- 알림 표시 시작-->
+            <li class="nav-item dropdown">
+              <!--  알림 아이콘 -->
+              <a
+                class="nav-icon dropdown-toggle"
+                href="#"
+                id="alertsDropdown"
+                data-toggle="dropdown"
+              >
+                <div class="position-relative">
+                  <!-- 알림 아이콘 -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-bell align-middle"
+                  >
+                    <path
+                      d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                    ></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                  </svg>
+                  <!-- 알림 갯수 -->
+                  <span class="indicator">2</span>
+                </div>
+              </a>
+
+              <!-- 알림 메뉴바-->
+              <div
+                class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                aria-labelledby="alertsDropdown"
+              >
+                <div class="list-group">
+                  <!-- 알림 예시 1 -->
+                  <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-user-plus text-success"
+                        >
+                          <path
+                            d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                          ></path>
+                          <circle cx="8.5" cy="7" r="4"></circle>
+                          <line x1="20" y1="8" x2="20" y2="14"></line>
+                          <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                      </div>
+
+                      <div class="col-10">
+                        <!-- 알림 메시지명-->
+                        <div class="text-dark">새로운 회원 요청</div>
+                        <!-- 알림 메시지 상세 내용 -->
+                        <div class="text-muted small mt-1">
+                          김수혁님이 회원 신청하였습니다.
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- 알림 예시 1 끝 -->
+                  <!-- 알림 예시 2 -->
+                  <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-user-plus text-success"
+                        >
+                          <path
+                            d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                          ></path>
+                          <circle cx="8.5" cy="7" r="4"></circle>
+                          <line x1="20" y1="8" x2="20" y2="14"></line>
+                          <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                      </div>
+
+                      <div class="col-10">
+                        <div class="text-dark">새로운 회원 요청</div>
+                        <div class="text-muted small mt-1">
+                          이민혁님이 회원 신청하였습니다.
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- 알림 예시 2 끝 -->
+                </div>
+              </div>
+            </li>
+            <!-- 알림 표시 끝-->
+
+            <!-- 채팅 알람 시작-->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-icon dropdown-toggle"
+                href="#"
+                id="messagesDropdown"
+                data-toggle="dropdown"
+              >
+                <div class="position-relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-message-square align-middle"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  <!-- 메시지 안 읽은 갯수 -->
+                  <span class="indicator">2</span>
+                </div>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                aria-labelledby="messagesDropdown"
+              >
+                <div class="dropdown-menu-header">
+                  <div class="position-relative">새로운 메시지</div>
+                </div>
+                <div class="list-group">
+                  <!-- 메시지 알림 예시 1 -->
+                  <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <!-- 사용자 사진 -->
+                        <img
+                          src="img/avatars/avatar-5.jpg"
+                          class="avatar img-fluid rounded-circle"
+                          alt="Vanessa Tucker"
+                        />
+                      </div>
+                      <div class="col-10 pl-2">
+                        <!-- 이름-->
+                        <div class="text-dark">Vanessa Tucker</div>
+                        <!-- 메시지 내용 -->
+                        <div class="text-muted small mt-1">
+                          Nam pretium turpis et arcu. Duis arcu tortor.
+                        </div>
+                        <!-- 시간 -->
+                        <div class="text-muted small mt-1">15m ago</div>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- 메시지 알람 예시 1 끝 -->
+                  <!-- 메시지 알림 예시 2 -->
+                  <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <img
+                          src="img/avatars/avatar-2.jpg"
+                          class="avatar img-fluid rounded-circle"
+                          alt="William Harris"
+                        />
+                      </div>
+                      <div class="col-10 pl-2">
+                        <div class="text-dark">William Harris</div>
+                        <div class="text-muted small mt-1">
+                          Curabitur ligula sapien euismod vitae.
+                        </div>
+                        <div class="text-muted small mt-1">2h ago</div>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- 메시지 알람 예시 2 끝 -->
+                </div>
+                <div class="dropdown-menu-footer">
+                  <a href="chat.html" class="text-muted">Show all messages</a>
+                </div>
+              </div>
+            </li>
+            <!-- 채팅 알람 끝 -->
+
+            <!-- 사진 및 마이페이지 로그아웃 시작 -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-icon dropdown-toggle d-inline-block d-sm-none"
+                href="#"
+                data-toggle="dropdown"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-settings align-middle"
+                >
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                  ></path>
+                </svg>
+              </a>
+
+              <a
+                class="nav-link dropdown-toggle d-none d-sm-inline-block"
+                href="#"
+                data-toggle="dropdown"
+              >
+                <!-- 사용자 이름 -->
+                <span class="text-dark"><strong>김수혁 </strong>님</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="pages-profile.html">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-user align-middle mr-1"
+                  >
+                    <path
+                      d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                    ></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  마이페이지</a
+                >
+
+                <a class="dropdown-item" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-log-out align-middle mr-1"
+                  >
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  로그아웃</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- 상단 nav 끝 -->
+
+      <!-- 콘텐츠 시작 -->
+      <main class="content">
+        <div class="container-fluid p-0">
+          <div class="mb-3">
+            <h1 class="h3 d-inline align-middle">Messages</h1>
+          </div>
+
+          <!-- 카드 시작 -->
+          <div class="card">
+            <div class="row g-0">
+              
+              <div class="col-12 col-lg-5 col-xl-3 border-right">
+                <!-- 검색 시작 -->
+                <div class="px-4 d-md-block">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                      <input
+                        type="text"
+                        class="form-control my-3"
+                        placeholder="검색...."
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- 검색 끝 -->
+
+               <!-- 회원목록 시작 -->
+
+               <!-- 채팅 회원 1 -->
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action border-0"
+                >
+                  <div class="d-flex align-items-start">
+                    <!-- 프로필 사진-->
+                    <img
+                      src="img/Kim.png"
+                      class="rounded-circle me-1"
+                      alt="Vanessa Tucker"
+                      width="40"
+                      height="40"
+                    />
+
+                    <!-- 이름-->
+                    <div
+                      class="flex-grow-1 ms-3"
+                      style="padding: 5px 0 0 5px; font-size: 20px"
+                    >
+                      김수현
+                    </div>
+
+                    <!-- 카톡 확인 안한 숫자-->
+                    <div class="btn btn-pill btn-primary">5</div>
+                  </div>
+                </a>
+                
+                <!-- 채팅 회원 2 -->
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action border-0"
+                >
+                  <div class="d-flex align-items-start">
+                    <img
+                      src="img/hyen.jpg"
+                      class="rounded-circle me-1"
+                      alt="Sharon Lessman"
+                      width="40"
+                      height="40"
+                    />
+                    <div class="flex-grow-1 ms-3">전지현</div>
+                  </div>
+                </a>
+
+                <hr class="d-block d-lg-none mt-1 mb-0" />
+              </div>
+              <!-- 회원목록 끝 -->
+
+              <!-- 채팅방 시작 -->
+              <div class="col-12 col-lg-7 col-xl-9">
+                <div class="py-2 px-4 border-bottom d-none d-lg-block">
+                  <div class="d-flex align-items-center py-1">
+                    <div class="position-relative">
+                      <img
+                        src="img/Kim.png"
+                        class="rounded-circle me-1"
+                        alt="Sharon Lessman"
+                        width="40"
+                        height="40"
+                      />
+                    </div>
+                    <div class="flex-grow-1 ps-3">
+                      <strong>김수현</strong>
+                    </div>
+                    <div>
+                      <button class="btn btn-light border btn-lg px-3">
+                        <i
+                          class="feather-lg"
+                          data-feather="more-horizontal"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 채팅내용 시작 -->
+                <div class="position-relative chat-message-height">
+                 
+                  <!-- 트레이너의 채팅 -->
+                  <div class="chat-messages p-4">
+                    <div class="chat-message-right">
+                      <!-- 보낸 시간-->
+                      <div class="text-muted small text-nowrap mt-2 text-display-block">
+                        오후 2:33
+                      </div>
+                      <!-- 채팅 내용 -->
+                      <div
+                        class="bg-color-yellow chat-message-block py-2 px-3 me-3"
+                      >
+                        오늘 스쿼트 몇세트 몇세트 몇세트 하세요 제발 술 드시지마세요dddddddddddd
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                  <!-- 회원의 채팅 -->
+                  <div class="chat-messages p-4">
+                    <div class="chat-message-left">
+                      <!-- 회원 이미지 -->
+                      <img
+                        src="img/Kim.png"
+                        class="rounded-circle me-1 image-width"
+                        alt="Sharon Lessman"
+                      />
+                      <!-- 채팅 내용-->
+                      <div
+                        class="bg-color-gray chat-message-block py-2 px-3 me-3"
+                      >
+                        그래서 이렇게 하면 된다는거죠? 아하 그렇구나
+                        ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                      </div>
+                      <!-- 보낸 시간-->
+                      <div class="text-muted small mt-2 chat-message-right text-display-block">
+                        오후 2:33
+                      </div>
+                      <!-- 회원 이름 -->
+                      <div class="mt-2 chat-message-left">
+                        김수현
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                  
+                </div>
+                <!-- 채팅내용 끝 -->
+
+                <!-- 채팅 전송 버튼 시작-->
+                <div class="flex-grow-0 py-3 px-4 border-top">
+                  <div class="input-group">
+                    <textarea
+                      class="form-control text-height"
+                      placeholder="메시지 입력"
+                    >
+                    </textarea>
+                    <button class="btn btn-primary">전송</button>
+                  </div>
+                </div>
+                <!-- 채팅 전송 버튼 끝-->
+                
+              </div>
+              <!-- 채팅방 끝 -->
+            </div>
+            <!-- 카드 끝 -->
+          </div>
+        </div>
+      </main>
+      <!-- 콘텐츠 끝 -->
+      
+       <!-- footer 시작 -->
+       <footer class="footer">
+        <div class="container-fluid">
+          <div class="row text-muted">
+            <div class="text-right">
+              <p class="mb-0">
+                &copy;
+                <a href="index.html" class="text-muted"
+                  ><strong>DAGYM</strong></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer 끝 -->
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

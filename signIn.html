@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- 아이콘-->
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <!-- 부트 스트랩 css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 메인 css -->
+    <link href="css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/signIn.css" />
+
+    <title>회원 가입</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- 왼쪽 네비게이션 시작-->
+      <!-- 클래스에 active시 클릭 효과 -->
+      <nav id="sidebar" class="sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="index.html">
+            <span class="align-middle">DAGYM</span>
+          </a>
+
+          <ul class="sidebar-nav">
+            <li class="sidebar-header">PT 회원</li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="userList.html">
+                <i class="align-middle" data-feather="list"></i>
+                <span class="align-middle">회원 목록</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="userMangement.html">
+                <i class="align-middle" data-feather="check-square"></i>
+                <span class="align-middle">회원 관리</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a
+                data-target="#ui"
+                data-toggle="collapse"
+                class="sidebar-link collapsed"
+              >
+                <i class="align-middle" data-feather="users"></i>
+                <span class="align-middle">회원</span>
+              </a>
+              <ul
+                id="ui"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-parent="#sidebar"
+              ></ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="calendar.html">
+                <i class="align-middle" data-feather="calendar"></i>
+                <span class="align-middle">일정</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="chat.html">
+                <i class="align-middle" data-feather="message-square"></i>
+                <span class="align-middle">채팅</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="trainerBoard.html">
+                <i class="align-middle" data-feather="box"></i>
+                <span class="align-middle">트레이너 게시판</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- 왼쪽 네비게이션 끝-->
+
+      <!-- 메인 시작-->
+      <div class="main">
+        <!-- 상단 nav 시작 -->
+        <nav class="navbar navbar-expand navbar-light navbar-bg">
+          <!-- 상단 왼쪽 활성화하고 숨길수 있는 거-->
+          <a class="sidebar-toggle d-flex">
+            <i class="hamburger align-self-center"></i>
+          </a>
+
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <!-- 로그인 회원 가입 -->
+              <li class="nav-item">
+                <a href="logIn.html">
+                  <span class="text-dark" style="padding-right: 10px"
+                    >로그인</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="signIn.html">
+                  <span class="text-dark">회원가입</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- 상단 nav 끝 -->
+
+        <!-- 콘텐츠 시작 -->
+        <main class="content">
+          <div class="container-fluid p-0">
+            <div class="container">
+              <h2 class="title">회원정보 입력</h2>
+
+              <form action="#" method="post">
+                <div class="resp_member_join">
+                  <div class="resp_join_table">
+                    <ul>
+                      <li class="th">
+                        <p>아이디</p>
+                      </li>
+                      <li class="td">
+                        <input type="text" name="" />
+                        <span>(영문소문자/숫자, 4~16자)</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>비밀번호</p>
+                      </li>
+                      <li class="td">
+                        <input type="password" name="" />
+                        <span
+                          >(영문 대소문자/숫자/특수문자 중 2가지 이상조합
+                          10자~16자)</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>비밀번호 확인</p>
+                      </li>
+                      <li class="td">
+                        <input type="password" name="" />
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>이름</p>
+                      </li>
+                      <li class="td">
+                        <input type="text" name="" />
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>핸드폰</p>
+                      </li>
+                      <li class="td">
+                        <input
+                          type="tel"
+                          name=""
+                          class="size_phone"
+                          maxlength="3"
+                        />
+                        -
+                        <input
+                          type="tel"
+                          name=""
+                          class="size_phone"
+                          maxlength="4"
+                        />
+                        -
+                        <input
+                          type="tel"
+                          name=""
+                          class="size_phone"
+                          maxlength="4"
+                        />
+                        <button type="button" class="btn">문자인증</button>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>인증번호</p>
+                      </li>
+                      <li class="td">
+                        <input type="text" name="" />
+                        <button type="button" class="btn">인증확인</button>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>이메일</p>
+                      </li>
+                      <li class="td">
+                        <input type="email" class="size_mail1" /> @
+                        <input type="email" class="size_mail2" />
+                        <select>
+                          <option value="">직접입력</option>
+                          <option value="naver.com">naver.com</option>
+                          <option value="gmail.com">gmail.com</option>
+                          <option value="korea.com">korea.com</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>주민번호</p>
+                      </li>
+                      <li class="td">
+                        <input type="text" name="" placeholder="123456" />
+                        -
+                        <input type="text" name="" placeholder="1xxxxxxx" />
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>주소</p>
+                      </li>
+                      <li class="td">
+                        <input type="tel" class="size_zip_all" />
+                        <button type="button" class="btn zip_btn">
+                          우편번호
+                        </button>
+                        <div class="address_area">
+                          <input
+                            type="text"
+                            name=""
+                            class="address size_address"
+                            readonly=""
+                          />
+                          <span>기본주소</span>
+                        </div>
+                        <div class="address_area">
+                          <input type="text" name="" class="size_address" />
+                          <span>나머지주소</span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="th">
+                        <p>트레이너여부</p>
+                      </li>
+                      <li class="td">
+                        <input type="radio" name="a" /> 일반회원
+                        <input type="radio" name="a" /> 트레이너
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="btn_area">
+                  <button type="submit" class="btn">회원가입</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+        <!-- 콘텐츠 끝 -->
+
+        <!-- footer 시작 -->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="text-right">
+                <p class="mb-0">
+                  &copy;
+                  <a href="index.html" class="text-muted"
+                    ><strong>DAGYM</strong></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- footer 끝 -->
+      </div>
+      <!-- 메인 끝-->
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

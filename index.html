@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- 아이콘-->
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <!-- 부트 스트랩 css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- 메인 css -->
+    <link href="css/app.css" rel="stylesheet" />
+
+    <title>메인 페이지</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- 왼쪽 네비게이션 시작-->
+      <!-- 클래스에 active시 클릭 효과 -->
+      <nav id="sidebar" class="sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="index.html">
+            <span class="align-middle">DAGYM</span>
+          </a>
+
+          <ul class="sidebar-nav">
+            <li class="sidebar-header">PT 회원</li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="userList.html">
+                <i class="align-middle" data-feather="list"></i>
+                <span class="align-middle">회원 목록</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="userMangement.html">
+                <i class="align-middle" data-feather="check-square"></i>
+                <span class="align-middle">회원 관리</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a
+                data-target="#ui"
+                data-toggle="collapse"
+                class="sidebar-link collapsed"
+              >
+                <i class="align-middle" data-feather="users"></i>
+                <span class="align-middle">회원</span>
+              </a>
+              <ul
+                id="ui"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-parent="#sidebar"
+              ></ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="calendar.html">
+                <i class="align-middle" data-feather="calendar"></i>
+                <span class="align-middle">일정</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="chat.html">
+                <i class="align-middle" data-feather="message-square"></i>
+                <span class="align-middle">채팅</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="trainerBoard.html">
+                <i class="align-middle" data-feather="box"></i>
+                <span class="align-middle">트레이너 게시판</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- 왼쪽 네비게이션 끝-->
+
+      <!-- 메인 시작-->
+      <div class="main">
+        <!-- 상단 nav 시작 -->
+        <nav class="navbar navbar-expand navbar-light navbar-bg">
+          <!-- 상단 왼쪽 활성화하고 숨길수 있는 거-->
+          <a class="sidebar-toggle d-flex">
+            <i class="hamburger align-self-center"></i>
+          </a>
+
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <!-- 로그인 회원 가입 -->
+              <li class="nav-item">
+                <a href="logIn.html">
+                  <span class="text-dark" style="padding-right: 10px"
+                    >로그인</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="signIn.html">
+                  <span class="text-dark">회원가입</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- 상단 nav 끝 -->
+
+        <!-- 콘텐츠 시작 -->
+        <main class="content">
+          <div class="container-fluid p-0">
+            <!-- Page Content -->
+            <div class="container">
+              <!-- Heading Row -->
+              <div class="row align-items-center my-5">
+                <div class="col-lg-7">
+                  <img
+                    class="img-fluid rounded mb-4 mb-lg-0"
+                    src="img/mainImg.jpg"
+                    alt="운동 사진"
+                  />
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-5">
+                  <h2 class="font-weight-light">
+                    회원을 편리하게 관리해 보세요
+                  </h2>
+                  <p>앱 다운로드</p>
+                  <a href="#"><img src="img/googleplay.jpg" width="130px" /></a>
+                  <a href="#"><img src="img/appStore.jpg" width="130px" /></a>
+                </div>
+                <!-- /.col-md-4 -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.container -->
+          </div>
+        </main>
+        <!-- 콘텐츠 끝 -->
+        <!-- footer 시작 -->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="text-right">
+                <p class="mb-0">
+                  &copy;
+                  <a href="index.html" class="text-muted"
+                    ><strong>DAGYM</strong></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- footer 끝 -->
+      </div>
+      <!-- 메인 끝-->
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
