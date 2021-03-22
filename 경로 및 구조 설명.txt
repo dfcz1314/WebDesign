@@ -1,7 +1,7 @@
 큰 div 클래스 wrap 안에
 왼쪽 nav
-메인( 상단 nav + 메인 콘텐츠)
-푸터
+메인( 상단 nav + 메인 콘텐츠 + 푸터)
+
 
 메인 페이지 index.html  o
 메인페이지(로그인했을때) index_logIn.html ㅇ

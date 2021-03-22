@@ -118,7 +118,7 @@
         <main class="content">
           <div class="container-fluid p-0">
             <div class="container">
-              <h2 class="title">회원정보 입력</h2>
+              <h2 class="title">회원가입</h2>
 
               <form action="#" method="post">
                 <div class="resp_member_join">
@@ -128,7 +128,7 @@
                         <p>아이디</p>
                       </li>
                       <li class="td">
-                        <input type="text" name="" />
+                        <input type="text" name="user_id" />
                         <span>(영문소문자/숫자, 4~16자)</span>
                       </li>
                     </ul>
@@ -137,7 +137,7 @@
                         <p>비밀번호</p>
                       </li>
                       <li class="td">
-                        <input type="password" name="" />
+                        <input type="password" name="user_pw" />
                         <span
                           >(영문 대소문자/숫자/특수문자 중 2가지 이상조합
                           10자~16자)</span
@@ -149,7 +149,7 @@
                         <p>비밀번호 확인</p>
                       </li>
                       <li class="td">
-                        <input type="password" name="" />
+                        <input type="password" name="user_pw" />
                       </li>
                     </ul>
                     <ul>
@@ -157,7 +157,7 @@
                         <p>이름</p>
                       </li>
                       <li class="td">
-                        <input type="text" name="" />
+                        <input type="text" name="user_name" />
                       </li>
                     </ul>
                     <ul>
@@ -167,21 +167,21 @@
                       <li class="td">
                         <input
                           type="tel"
-                          name=""
+                          name="user_pn"
                           class="size_phone"
                           maxlength="3"
                         />
                         -
                         <input
                           type="tel"
-                          name=""
+                          name="user_pn"
                           class="size_phone"
                           maxlength="4"
                         />
                         -
                         <input
                           type="tel"
-                          name=""
+                          name="user_pn"
                           class="size_phone"
                           maxlength="4"
                         />
@@ -202,13 +202,24 @@
                         <p>이메일</p>
                       </li>
                       <li class="td">
-                        <input type="email" class="size_mail1" /> @
-                        <input type="email" class="size_mail2" />
+                        <input
+                          type="email"
+                          name="user_email"
+                          class="size_mail1"
+                        />
+                        @
+                        <input
+                          type="email"
+                          name="user_email"
+                          class="size_mail2"
+                        />
                         <select>
                           <option value="">직접입력</option>
                           <option value="naver.com">naver.com</option>
                           <option value="gmail.com">gmail.com</option>
-                          <option value="korea.com">korea.com</option>
+                          <option value="daum.net">daum.net</option>
+                          <option value="google.com">google.com</option>
+                          <option value="nate.com">nate.com</option>
                         </select>
                       </li>
                     </ul>
@@ -217,9 +228,68 @@
                         <p>주민번호</p>
                       </li>
                       <li class="td">
-                        <input type="text" name="" placeholder="123456" />
+                        <input
+                          type="text"
+                          name="user_rrn"
+                          placeholder="123456"
+                          maxlength="6"
+                        />
                         -
-                        <input type="text" name="" placeholder="1xxxxxxx" />
+                        <input
+                          type="text"
+                          class="size_ssn"
+                          name="user_rrn"
+                          placeholder="1"
+                          maxlength="1"
+                        />
+                        <input
+                          type="text"
+                          class="size_ssn"
+                          name="user_rrn"
+                          value="*"
+                          maxlength="1"
+                          readonly
+                        />
+                        <input
+                          type="text"
+                          class="size_ssn"
+                          name="user_rrn"
+                          value="*"
+                          maxlength="1"
+                          readonly
+                        />
+                        <input
+                          type="text"
+                          class="size_ssn"
+                          name="user_rrn"
+                          value="*"
+                          maxlength="1"
+                          readonly
+                        />
+                        <input
+                          type="text"
+                          class="size_ssn"
+                          name="user_rrn"
+                          value="*"
+                          maxlength="1"
+                          readonly
+                        />
+                        <input
+                          type="text"
+                          class="size_ssn"
+                          name="user_rrn"
+                          value="*"
+                          maxlength="1"
+                          readonly
+                        />
+                        <input
+                          type="text"
+                          class="size_ssn"
+                          name="user_rrn"
+                          value="*"
+                          maxlength="1"
+                          readonly
+                        />
                       </li>
                     </ul>
                     <ul>
@@ -234,14 +304,17 @@
                         <div class="address_area">
                           <input
                             type="text"
-                            name=""
+                            name="user_normal"
                             class="address size_address"
-                            readonly=""
                           />
                           <span>기본주소</span>
                         </div>
                         <div class="address_area">
-                          <input type="text" name="" class="size_address" />
+                          <input
+                            type="text"
+                            name="address_detail"
+                            class="size_address"
+                          />
                           <span>나머지주소</span>
                         </div>
                       </li>
@@ -251,8 +324,8 @@
                         <p>트레이너여부</p>
                       </li>
                       <li class="td">
-                        <input type="radio" name="a" /> 일반회원
-                        <input type="radio" name="a" /> 트레이너
+                        <input type="radio" name="user_role" /> 일반회원
+                        <input type="radio" name="user_role" /> 트레이너
                       </li>
                     </ul>
                   </div>
@@ -260,6 +333,7 @@
 
                 <div class="btn_area">
                   <button type="submit" class="btn">회원가입</button>
+                  <button type="submit" class="btn">이전</button>
                 </div>
               </form>
             </div>
@@ -286,6 +360,10 @@
       </div>
       <!-- 메인 끝-->
     </div>
+    <script>
+      let number = document.getElementsByName("a");
+      console.log(number);
+    </script>
     <script src="js/app.js"></script>
   </body>
 </html>

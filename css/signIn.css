@@ -33,3 +33,6 @@ button { border: none; background-color: transparent; }
 .resp_join_table>ul>li.th>p { padding: 8px 22px 8px 10px; }
 
 .btn_area { display: flex; justify-content: flex-end; margin-top: 30px; }
+p {
+    margin-top:15px;
+}
